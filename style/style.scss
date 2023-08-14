@@ -51,7 +51,7 @@ h2 {
     }
 
     @media(max-width: $mobile) {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 }
 
@@ -154,6 +154,9 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media(max-width: $L-mobile){
+        background-position: bottom center;
+    }
     @media(max-width: $mobile){
         background-image: url("../assets/images/hero-bg-mobile.svg");
     }
@@ -161,12 +164,16 @@ a {
 .header {
     padding: 20px 0;
     max-height: 120px;
-    position: fixed;
-    width: 100%;
+    // position: fixed;
     height: 112px;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(8.5px);
-
+    position: relative;
+    &-main{
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+    }
     &-logo {
         max-height: 75px;
 
@@ -256,6 +263,34 @@ a {
         @media(max-width: 600px){
             display: none;
         }
+    }
+    &-burger{
+        position: absolute;
+        right: -100%;  
+
+        width: fit-content;
+        padding: 30px 60px;
+        margin-left: auto;
+        border-radius: 25px 0px 25px 25px;
+        background: #FFF;
+        box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+        transition: right .5s;
+        &.active{
+            right: 0;
+        }
+        &__nav{
+            a{
+                color: #000;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 120%; 
+                margin-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
     }
 }
 
@@ -467,10 +502,71 @@ a {
         }
     }
 }
+.quality{
+    padding-top: 180px;
+    position: relative;
+    padding-bottom: 100px;
+    @media(max-width: $L-laptop){
+        padding-top: 100px;
+    }
 
+    @media(max-width: $L-mobile){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 2px solid #A5CEFF;
+        width: 60%;
+        @media(max-width: $mobile){
+            width: 90%;
+        }
+    }
+    &-wrapper{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media(max-width: 700px){
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+    &-img, &-info{
+        flex-basis: 50%;
+        @media(max-width: 700px){
+            flex-basis: unset;
+        }
+    }
+    &-img{
+        margin-right: 20px;
+        img{
+            width: 100%;
+        }
+    }
+    &-heading{
+        margin-bottom: 30px;
+        @media(max-width:$L-mobile){
+            margin-bottom: 20px;
+        }
+    }
+    &-text{
+        margin-bottom: 30px;
+        @media(max-width: $L-mobile){
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}
+.contacts{
+    
+}
 .footer {
     background: #DEE6F7;
     padding: 20px 0;
+    margin-top: 100px;
 
     @media(max-width: $L-laptop) {
         padding: 30px 0;
@@ -486,6 +582,9 @@ a {
             column-gap: 40px;
             row-gap: 25px;
         }
+        @media(max-width: 375px){
+            column-gap: 30px;
+        }
     }
     &-logo {
         max-height: 115px;
@@ -496,6 +595,9 @@ a {
 
         @media(max-width: 850px) {
             max-height: 60px;
+        }
+        @media(max-width: $mobile){
+            max-height: 50px;
         }
     }
     &-nav {
@@ -529,6 +631,7 @@ a {
 
             @media(max-width: 850px) {
                 font-size: 14px;
+                font-weight: 300;
             }
 
             &:last-child {
@@ -570,6 +673,9 @@ a {
 
             @media(max-width: 850px) {
                 font-size: 16px;
+            }
+            @media(max-width: $mobile){
+                font-size: 14px;
             }
         }
     }
@@ -642,8 +748,19 @@ a {
     left: 0;
     position: absolute;
     width: 100%;
-    height: 11% !important;
+    height: 10% !important;
     transition: all .3s ease;
     background: #000000;
     border-radius: 5px;
 }
+.header__menu.active span {
+    transform: scale(0) translate(0, -50%);
+  }
+  .header__menu.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  .header__menu.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
