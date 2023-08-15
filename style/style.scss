@@ -592,7 +592,9 @@ a {
 
     &-img {
         margin-right: 20px;
-
+        @media(max-width: 600px){
+            margin-right: 0;
+        }
         img {
             width: 100%;
         }
