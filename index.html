@@ -7,8 +7,11 @@
     <title></title>
     <link rel="icon" href="assets/images/taudiLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -20,7 +23,7 @@
                     <div class="header-wrapper">
                         <img src="assets/images/taudiLogo.png" alt="" class="header-logo">
                         <nav class="header-nav">
-                            <a href="">о нас</a>
+                            <a href="#about">о нас</a>
                             <a href="">продукция</a>
                             <a href="">сертификаты</a>
                         </nav>
@@ -68,7 +71,7 @@
             </header>
             <div class="header-burger">
                 <div class="header-burger__nav">
-                    <a href="">о нас</a>
+                    <a href="#about">о нас</a>
                     <a href="">продукция</a>
                     <a href="">сертификаты</a>
                 </div>
@@ -118,8 +121,8 @@
                         лакокрасочные материалы самого высокого качества, отвечающие всем требованиям современных
                         рынков.
                     </p>
-                    <a href="" class="hero-download">
-                        <button class="button hero-btn">скачать каталог 2023</button>
+                    <a href="#form" class="hero-download">
+                        <button class="button hero-btn">оставить заявку</button>
                     </a>
                 </div>
             </div>
@@ -167,6 +170,96 @@
                             <div class="p1 about-card__info">
                                 завод производит лакокрасочные<br> материалы высочайшего качества
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product" id="product">
+            <div class="container">
+                <div class="product-wrapper">
+                    <h2 class="product-heading">Продукция «TAUDI»</h2>
+                    <p class="p1 product-info">
+                        Благодаря передовым технологиям и современному оборудованию, завод способен производить
+                        лакокрасочные материалы самого высокого качества, отвечающие всем требованиям современного
+                        рынка.
+                    </p>
+                    <div class="product-slider">
+                        <div class="product-swiper swiper" id="productSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/facade.png" alt="">
+                                    <div class="product-slide__title">КРАСКА ФАСАДНАЯ</div>
+                                    <span class="product-slide__desc">водно-дисперсионная </span>
+                                    <ul class="product-slide__list">
+                                        <li>матовая</li>
+                                        <li>акриловая</li>
+                                        <li>паропроницаемая</li>
+                                        <li>высокая укрывистость</li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/washable.png" alt="">
+                                    <div class="product-slide__title">КРАСКА ИНТЕРЬЕРНАЯ МОЮЩАЯСЯ
+                                        <span>для стен и потолка</span>
+                                    </div>
+                                    <span class="product-slide__desc">водно-дисперсионная </span>
+                                    <ul class="product-slide__list">
+                                        <li>матовая</li>
+                                        <li>акриловая</li>
+                                        <li>супербелая</li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/concrete.png" alt="">
+                                    <div class="product-slide__title">БЕТОНКОНТАКТ
+                                    </div>
+                                    <span class="product-slide__desc">
+                                        адгезионная грунтовка с кварцевым<br> песком</span>
+                                    <ul class="product-slide__list">
+                                        <li>рельефная</li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/interior.png" alt="">
+                                    <div class="product-slide__title">КРАСКА ИНТЕРЬЕРНАЯ
+
+                                        <span>для стен и потолка</span>
+                                    </div>
+                                    <span class="product-slide__desc">водно-дисперсионная </span>
+                                    <ul class="product-slide__list">
+                                        <li>матовая</li>
+                                        <li>акриловая</li>
+                                        <li>супербелая</li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/base-c.png" alt="">
+                                    <div class="product-slide__title">БАЗА С
+                                        <span>краска для колеровки</span>
+                                    </div>
+                                    <ul class="product-slide__list">
+                                        <li>бесцветная</li>
+                                        <li>матовая</li>
+                                        <li>акриловая</li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide product-slide">
+                                    <img src="assets/images/primer.png" alt="">
+                                    <div class="product-slide__title">ГРУНТОВКА </div>
+                                    <span class="product-slide__desc">для наружных и внутренних работ </span>
+                                    <ul class="product-slide__list">
+                                        <li>акриловая</li>
+                                        <li>интерьерная</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev" id="productPrev">
+                            <img src="assets/svg/arrow-left.svg" alt="">
+                        </div>
+                        <div class="swiper-button-next" id="productNext">
+                            <img src="assets/svg/arrow-right.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -241,17 +334,20 @@
                         </div>
                     </div>
                     <div class="contacts-right">
-                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa53ab21ad8bb3c120e5d62e35e7d6d6a693f1dcbe31a392af6e28517ca591ee5&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                        <script type="text/javascript" charset="utf-8" async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa53ab21ad8bb3c120e5d62e35e7d6d6a693f1dcbe31a392af6e28517ca591ee5&amp;width=500&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                 </div>
-                <form action="#" class="contacts-form">
-                    <div class="contacts-form__heading">
-                        Предоставим прайс и ответим на все вопросы
-                    </div>
-                    <input type="text" id="name" class="input" required placeholder="Ваше имя" />
-                    <input type="tel" id="tel" class="input" placeholder="Номер телефона" required />
-                    <button class="button">Отправить</button>
-                </form>
+                <div class="contacts-inner" id="form">
+                    <form action="#" class="contacts-form">
+                        <div class="contacts-form__heading">
+                            Предоставим прайс и ответим на все вопросы
+                        </div>
+                        <input type="text" id="name" class="input" required placeholder="Ваше имя" />
+                        <input type="tel" id="tel" class="input" placeholder="Номер телефона" required />
+                        <button class="button">Отправить</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -303,6 +399,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
 

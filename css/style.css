@@ -628,6 +628,97 @@ a {
   }
 }
 
+.product {
+  padding: 80px 0;
+}
+.product-info {
+  margin: 30px 0 75px;
+}
+.product-slider {
+  position: relative;
+}
+.product-slide img {
+  width: 100%;
+}
+.product-slide__title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.product-slide__title span {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media (max-width: 1600px) {
+  .product-slide__title span {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1600px) {
+  .product-slide__title {
+    font-size: 24px;
+  }
+}
+.product-slide__desc {
+  display: block;
+  margin-top: 10px;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 120%;
+}
+@media (max-width: 1600px) {
+  .product-slide__desc {
+    font-size: 18px;
+  }
+}
+.product-slide__list {
+  margin-top: 10px;
+  list-style-position: inside;
+}
+.product-slide__list li {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 120%;
+}
+@media (max-width: 1600px) {
+  .product-slide__list li {
+    font-size: 18px;
+  }
+}
+.product #productPrev {
+  left: -60px;
+}
+.product #productPrev img {
+  width: 60px;
+}
+@media (max-width: 1600px) {
+  .product #productPrev img {
+    width: 50px;
+  }
+}
+.product #productNext {
+  right: -60px;
+}
+.product #productNext img {
+  width: 60px;
+}
+@media (max-width: 1600px) {
+  .product #productNext img {
+    width: 50px;
+  }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+
 .quality {
   padding-top: 180px;
   position: relative;
@@ -941,9 +1032,17 @@ a {
     font-size: 14px;
   }
 }
+.contacts-inner {
+  padding-top: 120px;
+}
+@media (max-width: 600px) {
+  .contacts-inner {
+    padding-top: 150px;
+  }
+}
 .contacts-form {
   max-width: 1075px;
-  margin: 120px auto 0;
+  margin: 0 auto;
   border-radius: 50px;
   background: #FFF;
   -webkit-box-shadow: 3px 4px 87px 0px rgba(0, 0, 0, 0.25);
@@ -952,7 +1051,6 @@ a {
 }
 @media (max-width: 600px) {
   .contacts-form {
-    margin-top: 150px;
     border-radius: 25px;
   }
 }
