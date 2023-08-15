@@ -164,7 +164,9 @@ a {
     }
 
     @media(max-width: $mobile) {
+        background-position: center right 20%;
         background-image: url("../assets/images/hero-bg-mobile.png");
+        // background-image: linear-gradient(60deg, rgba(255, 255, 255, 0.61) 0%, rgba(255, 255, 255, 0.00) 100%), url("../assets/images/hero-bg-mobile.png");
     }
 }
 
@@ -191,12 +193,16 @@ a {
         }
 
         @media(max-width: $tablet) {
-            max-height: 45px;
+            max-height: 30px;
         }
     }
 
     @media(max-width: $tablet) {
         height: 95px;
+    }
+    @media(max-width: 600px){
+        padding: 15px 0;
+        height: 60px;
     }
 
     &-wrapper {
@@ -334,7 +340,9 @@ a {
     @media(max-width: $tablet) {
         padding-top: 95px;
     }
-
+    @media(max-width: 600px){
+        padding-top: 60px;
+    }
     &-info {
         max-width: 925px;
 
@@ -344,6 +352,12 @@ a {
 
         @media(max-width: $tablet) {
             max-width: 410px;
+        }
+        @media(max-width: $mobile){
+            max-width: 300px;
+        }
+        @media(max-width: 375px){
+            max-width: 255px;
         }
     }
 
@@ -385,6 +399,7 @@ a {
 
             @media(max-width: $tablet) {
                 font-size: 64px;
+                line-height: 150%;
             }
 
             @media(max-width: $mobile) {
@@ -478,6 +493,7 @@ a {
 
         @media(max-width: $tablet) {
             padding: 30px 12px;
+            border-radius: 25px;
         }
 
         &__heading {

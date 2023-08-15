@@ -185,6 +185,7 @@ a {
 }
 @media (max-width: 475px) {
   .wrapper {
+    background-position: center right 20%;
     background-image: url("../assets/images/hero-bg-mobile.png");
   }
 }
@@ -213,12 +214,18 @@ a {
 }
 @media (max-width: 1023px) {
   .header-logo {
-    max-height: 45px;
+    max-height: 30px;
   }
 }
 @media (max-width: 1023px) {
   .header {
     height: 95px;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 0;
+    height: 60px;
   }
 }
 .header-wrapper {
@@ -375,6 +382,11 @@ a {
     padding-top: 95px;
   }
 }
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 60px;
+  }
+}
 .hero-info {
   max-width: 925px;
 }
@@ -386,6 +398,16 @@ a {
 @media (max-width: 1023px) {
   .hero-info {
     max-width: 410px;
+  }
+}
+@media (max-width: 475px) {
+  .hero-info {
+    max-width: 300px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-info {
+    max-width: 255px;
   }
 }
 .hero-title {
@@ -433,6 +455,7 @@ a {
 @media (max-width: 1023px) {
   .hero-title span {
     font-size: 64px;
+    line-height: 150%;
   }
 }
 @media (max-width: 475px) {
@@ -540,6 +563,7 @@ a {
 @media (max-width: 1023px) {
   .about-card {
     padding: 30px 12px;
+    border-radius: 25px;
   }
 }
 .about-card__heading {
