@@ -74,14 +74,15 @@ function closeModal() {
 
 const certificate = new Swiper('#certificateSwiper', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: '#certificateNext',
     prevEl: '#certificatePrev',
   },
   breakpoints: {
     320: {
-
+      slidesPerView: 1,
+      spaceBetween: 0,
     },
     600: {
       slidesPerView: 2,
@@ -93,3 +94,35 @@ const certificate = new Swiper('#certificateSwiper', {
     }
   }
 });
+const certificateMSwiper = new Swiper('#certificateMSwiper', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 1,
+});
+
+const certificateButtons = document.querySelectorAll('.certificate-btn');
+certificateButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    // Открываем модальное окно
+    openCertificateModal(index);
+  });
+});
+function openCertificateModal(slideIndex) {
+  // Открываем модальное окно
+  const modal = document.getElementById('certificateModal');
+  modal.style.display = 'flex';
+
+  // Создаем Swiper внутри модального окна и устанавливаем начальный слайд
+  const certificateMSwiper = new Swiper('#certificateMSwiper', {
+    initialSlide: slideIndex,
+    // Другие параметры Swiper...
+  });
+
+  // Добавляем обработчик события для закрытия модального окна
+  const closeBtn = document.getElementById('certificateClose');
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    // Уничтожаем Swiper при закрытии модального окна
+    certificateMSwiper.destroy();
+  });
+}
