@@ -11,6 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Подключение библиотек Leaflet и стилей -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<!-- Подключение OpenStreetMap Tile Layer -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -339,6 +347,44 @@
                             идеи и индивидуальные требования заказчиков.
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="address">
+            <div class="container">
+                <h2 class="address-heading">
+                    Дистрибьюторы
+                </h2>
+                <p class="p1 address-info">
+                    Мы имеем множетво партнеров по всему Казахстану, которые представляют нашу продукцию. Также мы открыты к сотрудничеству, напишите нам, если вам интересно стать нашим партнером.
+                </p>
+                <div class="address-wrapper">
+                    <div id="city-menu">
+                        <h3>Все дистрибьюторы</h3>
+                        <ul>
+                          <li data-marker="marker1">г. Астана</li>
+                          <li data-marker="marker2">г. Алматы</li>
+                          <li data-marker="marker3">г. Абай</li>
+                          <li data-marker="marker4">г. Балхаш</li>
+                          <li data-marker="marker5">г. Жезказган</li>
+
+                          <li data-marker="marker6">г. Костанай</li>
+                          <li data-marker="marker7">г. Кокшетау</li>
+                          <li data-marker="marker8">г. Караганда</li>
+                          <li data-marker="marker9">г. Караганда</li>
+
+                          <li data-marker="marker10">г. Петропавловск</li>
+                          <li data-marker="marker11">г. Сарань</li>
+                          <li data-marker="marker12">г. Талдыкорган</li>
+                          <li data-marker="marker13">г. Темиртау</li>
+
+                          <li data-marker="marker14">г. Шахтинск</li>
+                          <li data-marker="marker15">г. Щучинск</li>
+                          <li data-marker="marker16">г. Экибастуз</li>
+                          <!-- Добавьте остальные города -->
+                        </ul>
+                      </div>
+                      <div id="map"></div>
                 </div>
             </div>
         </section>
