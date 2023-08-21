@@ -8,16 +8,15 @@
     <link rel="icon" href="assets/images/taudiLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- Подключение библиотек Leaflet и стилей -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-<!-- Подключение OpenStreetMap Tile Layer -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Подключение библиотек Leaflet и стилей -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Подключение OpenStreetMap Tile Layer -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
@@ -26,14 +25,14 @@
 <body>
     <div class="wrapper">
         <div class="header-main">
-            <header class="header">
+            <header class="header wow animate__animated animate__fadeInDown">
                 <div class="container">
                     <div class="header-wrapper">
                         <img src="assets/images/taudiLogo.png" alt="" class="header-logo">
                         <nav class="header-nav">
                             <a href="#about">о нас</a>
-                            <a href="">продукция</a>
-                            <a href="">сертификаты</a>
+                            <a href="#product">продукция</a>
+                            <a href="#certificate">сертификаты</a>
                         </nav>
                         <div class="header-right">
                             <div class="header-media">
@@ -80,8 +79,8 @@
             <div class="header-burger">
                 <div class="header-burger__nav">
                     <a href="#about">о нас</a>
-                    <a href="">продукция</a>
-                    <a href="">сертификаты</a>
+                    <a href="#product">продукция</a>
+                    <a href="#certificate">сертификаты</a>
                 </div>
                 <div class="header-burger__media">
                     <a href="tel:87273828700" class="header-item">
@@ -120,11 +119,11 @@
         <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-wrapper">
-                    <div class="hero-title">
+                    <div class="hero-title wow animate__animated animate__fadeInDown">
                         Лакокрасочный завод
                         <span>«TAUDI»</span>
                     </div>
-                    <p class="p1 hero-info">
+                    <p class="p1 hero-info wow animate__animated animate__fadeInUp">
                         Благодаря передовым технологиям и современному оборудованию, завод способен производить
                         лакокрасочные материалы самого высокого качества, отвечающие всем требованиям современных
                         рынков.
@@ -140,7 +139,7 @@
         <section class="section about" id="about">
             <div class="container">
                 <div class="about-wrapper">
-                    <h2 class="about-heading">«TAUDI» — крупнейший лакокрасочный завод на территории Азии</h2>
+                    <h2 class="about-heading wow animate__animated animate__fadeInDown">«TAUDI» — крупнейший лакокрасочный завод на территории Азии</h2>
                     <p class="p1 about-info">
                         Завод располагает передовыми производственными линиями, способными выпускать продукцию в
                         огромных объемах, что сделает предприятие ведущим игроком на рынке.
@@ -186,8 +185,8 @@
         <section class="product" id="product">
             <div class="container">
                 <div class="product-wrapper">
-                    <h2 class="product-heading">Продукция «TAUDI»</h2>
-                    <p class="p1 product-info">
+                    <h2 class="product-heading wow animate__animated animate__fadeInDown">Продукция «TAUDI»</h2>
+                    <p class="p1 product-info wow animate__animated animate__fadeInDown">
                         Благодаря передовым технологиям и современному оборудованию, завод способен производить
                         лакокрасочные материалы самого высокого качества, отвечающие всем требованиям современного
                         рынка.
@@ -276,8 +275,8 @@
         <section class="certificate" id="certificate">
             <div class="container">
                 <div class="certificate-wrapper">
-                    <h2 class="certificate-heading">Сертификаты</h2>
-                    <p class="p1 certificate-info">
+                    <h2 class="certificate-heading wow animate__animated animate__fadeInDown">Сертификаты</h2>
+                    <p class="p1 certificate-info wow animate__animated animate__fadeInDown">
                         Каждый продукт проходит обязательную проверку в рамках процедуры сертификации, что подтверждает
                         высокие стандарты качества и надежность нашей продукции.
                     </p>
@@ -337,7 +336,7 @@
                         <img src="assets/images/quality.png" alt="">
                     </div>
                     <div class="quality-info">
-                        <h2 class="quality-heading">Контроль качества</h2>
+                        <h2 class="quality-heading wow animate__animated animate__fadeInDown">Контроль качества</h2>
                         <div class="p1 quality-text">
                             Каждый этап производства на заводе «TAUDI» строго контролируется высококвалифицированными
                             специалистами, что гарантирует стабильность качества продукции.
@@ -350,51 +349,67 @@
                 </div>
             </div>
         </section>
-        <section class="address">
+        <section class="address" id="#address">
             <div class="container">
-                <h2 class="address-heading">
+                <h2 class="address-heading wow animate__animated animate__fadeInDown">
                     Дистрибьюторы
                 </h2>
-                <p class="p1 address-info">
-                    Мы имеем множетво партнеров по всему Казахстану, которые представляют нашу продукцию. Также мы открыты к сотрудничеству, напишите нам, если вам интересно стать нашим партнером.
+                <p class="p1 address-info wow animate__animated animate__fadeInDown">
+                    Мы имеем множетво партнеров по всему Казахстану, которые представляют нашу продукцию. Также мы
+                    открыты к сотрудничеству, напишите нам, если вам интересно стать нашим партнером.
                 </p>
+                <div class="address-search">
+                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_411_1179)">
+                            <path
+                                d="M34.5725 32.5119L25.8677 23.8071C28.2399 20.9059 29.4062 17.2039 29.1254 13.4669C28.8446 9.72986 27.1382 6.24371 24.3592 3.72953C21.5802 1.21535 17.9411 -0.134513 14.1947 -0.0408418C10.4483 0.0528296 6.88125 1.58287 4.23132 4.23279C1.5814 6.88271 0.0513648 10.4498 -0.0423066 14.1962C-0.135978 17.9426 1.21388 21.5816 3.72806 24.3607C6.24225 27.1397 9.72839 28.8461 13.4654 29.1269C17.2024 29.4077 20.9044 28.2413 23.8056 25.8692L32.5104 34.574C32.7855 34.8396 33.1539 34.9866 33.5362 34.9833C33.9186 34.98 34.2844 34.8266 34.5548 34.5562C34.8251 34.2858 34.9785 33.9201 34.9818 33.5377C34.9852 33.1553 34.8382 32.7869 34.5725 32.5119ZM14.5831 26.2513C12.2757 26.2513 10.0201 25.567 8.10149 24.2851C6.18291 23.0031 4.68757 21.181 3.80454 19.0492C2.92152 16.9174 2.69048 14.5717 3.14064 12.3085C3.5908 10.0454 4.70195 7.96664 6.33356 6.33502C7.96517 4.70341 10.044 3.59227 12.3071 3.14211C14.5702 2.69195 16.916 2.92299 19.0478 3.80601C21.1796 4.68903 23.0017 6.18438 24.2836 8.10295C25.5656 10.0215 26.2498 12.2772 26.2498 14.5846C26.2463 17.6777 25.0161 20.6432 22.8289 22.8303C20.6417 25.0175 17.6763 26.2478 14.5831 26.2513Z"
+                                fill="#0D0D0D" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_411_1179">
+                                <rect width="35" height="35" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <input id="city-search-input" type="text" placeholder="Введите город">
+                </div>
                 <div class="address-wrapper">
                     <div id="city-menu">
                         <h3>Все дистрибьюторы</h3>
                         <ul>
-                          <li data-marker="marker1">г. Астана</li>
-                          <li data-marker="marker2">г. Алматы</li>
-                          <li data-marker="marker3">г. Абай</li>
-                          <li data-marker="marker4">г. Балхаш</li>
-                          <li data-marker="marker5">г. Жезказган</li>
+                            <li data-marker="marker1">г. Астана</li>
+                            <li data-marker="marker2">г. Алматы</li>
+                            <li data-marker="marker3">г. Абай</li>
+                            <li data-marker="marker4">г. Балхаш</li>
+                            <li data-marker="marker5">г. Жезказган</li>
 
-                          <li data-marker="marker6">г. Костанай</li>
-                          <li data-marker="marker7">г. Кокшетау</li>
-                          <li data-marker="marker8">г. Караганда</li>
-                          <li data-marker="marker9">г. Караганда</li>
+                            <li data-marker="marker6">г. Костанай</li>
+                            <li data-marker="marker7">г. Кокшетау</li>
+                            <li data-marker="marker8">г. Караганда</li>
+                            <li data-marker="marker9">г. Сортировка</li>
 
-                          <li data-marker="marker10">г. Петропавловск</li>
-                          <li data-marker="marker11">г. Сарань</li>
-                          <li data-marker="marker12">г. Талдыкорган</li>
-                          <li data-marker="marker13">г. Темиртау</li>
+                            <li data-marker="marker10">г. Петропавловск</li>
+                            <li data-marker="marker11">г. Сарань</li>
+                            <li data-marker="marker12">г. Талдыкорган</li>
+                            <li data-marker="marker13">г. Темиртау</li>
 
-                          <li data-marker="marker14">г. Шахтинск</li>
-                          <li data-marker="marker15">г. Щучинск</li>
-                          <li data-marker="marker16">г. Экибастуз</li>
-                          <!-- Добавьте остальные города -->
+                            <li data-marker="marker14">г. Шахтинск</li>
+                            <li data-marker="marker15">г. Щучинск</li>
+                            <li data-marker="marker16">г. Экибастуз</li>
+                            <!-- Добавьте остальные города -->
                         </ul>
-                      </div>
-                      <div id="map"></div>
+                    </div>
+                    <div id="map"></div>
                 </div>
             </div>
         </section>
         <section class="contacts" id="contacts">
             <div class="container">
-                <h2 class="contacts-heading">Контакты</h2>
+                <h2 class="contacts-heading wow animate__animated animate__fadeInDown">Контакты</h2>
                 <div class="contacts-wrapper">
                     <div class="contacts-left">
-                        <p class="p1">Республика Казахстан, г. Алматы,<br> пр. Сүйінбай, 314</p>
-                        <div class="contacts-media">
+                        <p class="p1 wow animate__animated animate__fadeInLeft">Республика Казахстан, г. Алматы,<br> пр. Сүйінбай, 314</p>
+                        <div class="contacts-media wow animate__animated animate__fadeInLeft">
                             <a href="tel:+77273828700">
                                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -428,7 +443,7 @@
                                 <span>taudipaint@taudi.kz</span>
                             </a>
                         </div>
-                        <div class="contacts-work">
+                        <div class="contacts-work wow animate__animated animate__fadeInUp">
                             <p class="contacts-work__heading">Хотитие у нас работать?</p>
                             <p class="contacts-work__info">
                                 оправляйте резюме на почту
@@ -443,7 +458,7 @@
                 </div>
                 <div class="contacts-inner" id="form">
                     <form action="#" class="contacts-form">
-                        <div class="contacts-form__heading">
+                        <div class="contacts-form__heading wow animate__animated animate__fadeInDown">
                             Предоставим прайс и ответим на все вопросы
                         </div>
                         <input type="text" id="name" class="input" required placeholder="Ваше имя" />
@@ -459,9 +474,9 @@
             <div class="footer-wrapper">
                 <img src="assets/images/taudiLogo.png" alt="" class="footer-logo">
                 <nav class="footer-nav">
-                    <a href="">о нас</a>
-                    <a href="">сертификаты</a>
-                    <a href="">продукция</a>
+                    <a href="#about">о нас</a>
+                    <a href="#certificate">сертификаты</a>
+                    <a href="#product">продукция</a>
                     <a href="">работа</a>
                 </nav>
                 <div class="footer-media">
@@ -725,6 +740,11 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>

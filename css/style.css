@@ -7,6 +7,18 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  /* Track */
+  /* Handle */
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(165, 205, 255, 0.4901960784);
+}
+body::-webkit-scrollbar-thumb {
+  background: #20408D;
+  border-radius: 10px;
 }
 
 body.lock {
@@ -859,6 +871,11 @@ a {
     background: none;
   }
 }
+@media (max-width: 650px) {
+  .product-modal__slide ul {
+    padding: 0;
+  }
+}
 .product-modal__slide ul li {
   color: #000;
   font-family: "Roboto", sans-serif;
@@ -942,6 +959,11 @@ a {
     background: linear-gradient(270deg, #EAF4FF 46.49%, rgba(234, 244, 255, 0) 100%);
   }
 }
+@media (max-width: 650px) {
+  .product-modal__right {
+    background: none;
+  }
+}
 .product-modal__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -957,6 +979,11 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 5px 45px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    overflow-y: scroll;
   }
 }
 .product-modal__weight {
@@ -979,6 +1006,17 @@ a {
     display: none;
   }
 }
+@media (max-width: 650px) {
+  .product-modal__weight {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 15px auto;
+    font-size: 14px;
+    padding: 6px 0;
+  }
+}
 .product-modal__weight-mob {
   display: none;
 }
@@ -995,6 +1033,11 @@ a {
     padding: 15px;
   }
 }
+@media (max-width: 650px) {
+  .product-modal__weight-mob {
+    display: none;
+  }
+}
 .product-modal__image {
   margin-right: 20px;
   padding-top: 20px;
@@ -1003,6 +1046,12 @@ a {
 @media (max-width: 1023px) {
   .product-modal__image {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .product-modal__image {
+    padding: 0;
+    margin: 0;
   }
 }
 .product-modal__image img {
@@ -1021,6 +1070,13 @@ a {
 @media (max-width: 1023px) {
   .product-modal__image img {
     width: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .product-modal__image img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
   }
 }
 @media (max-width: 1600px) {
@@ -1718,14 +1774,115 @@ a {
 .address {
   padding: 65px 0 180px;
 }
+@media (max-width: 1600px) {
+  .address {
+    padding: 100px 0 120px;
+  }
+}
+@media (max-width: 768px) {
+  .address {
+    padding: 65px 0;
+  }
+}
 .address-wrapper {
   position: relative;
 }
 .address-info {
   margin: 30px 0 50px;
 }
+.address-tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.address-tel a {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+@media (max-width: 1600px) {
+  .address-tel a {
+    font-size: 14px;
+  }
+}
+.address-search {
+  margin-bottom: 20px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 59px;
+  background: #FFF;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px 30px;
+}
+@media (max-width: 768px) {
+  .address-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 475px) {
+  .address-search {
+    padding: 10px 20px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+@media (max-width: 475px) {
+  .address-search svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.address-search input {
+  background: transparent;
+  color: #090909;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+  outline: none;
+  border: none;
+}
+.address-search input::-webkit-input-placeholder {
+  color: #929292;
+}
+.address-search input::-moz-placeholder {
+  color: #929292;
+}
+.address-search input:-ms-input-placeholder {
+  color: #929292;
+}
+.address-search input::-ms-input-placeholder {
+  color: #929292;
+}
+.address-search input::placeholder {
+  color: #929292;
+}
+@media (max-width: 475px) {
+  .address-search input {
+    font-size: 14px;
+  }
+}
 
 #city-menu {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1739,6 +1896,11 @@ a {
   -webkit-box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 768px) {
+  #city-menu {
+    display: none;
+  }
+}
 #city-menu h3 {
   color: #000;
   font-size: 24px;
@@ -1748,12 +1910,32 @@ a {
   margin-bottom: 20px;
   padding: 0 30px;
 }
+@media (max-width: 1600px) {
+  #city-menu h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  #city-menu h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  #city-menu h3 {
+    display: none;
+  }
+}
 #city-menu ul {
   max-height: 300px;
   overflow-y: scroll;
   /* width */
   /* Track */
   /* Handle */
+}
+@media (max-width: 1023px) {
+  #city-menu ul {
+    max-height: 200px;
+  }
 }
 #city-menu ul::-webkit-scrollbar {
   width: 7px;
@@ -1773,6 +1955,17 @@ a {
   font-weight: 500;
   line-height: 120%;
   padding: 10px 30px;
+  cursor: pointer;
+}
+@media (max-width: 1600px) {
+  #city-menu ul li {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1023px) {
+  #city-menu ul li {
+    font-size: 16px;
+  }
 }
 
 .selected {
@@ -1800,7 +1993,33 @@ a {
 }
 @media (max-width: 475px) {
   #map {
-    height: 205px;
+    height: 270px;
+  }
+}
+#map h3 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  #map h3 {
+    font-size: 16px;
+  }
+}
+#map p {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+@media (max-width: 1600px) {
+  #map p {
+    font-size: 14px;
   }
 }
 

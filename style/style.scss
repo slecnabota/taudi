@@ -14,6 +14,20 @@ $mobile: 475px;
 
 body {
     font-family: 'Montserrat', sans-serif;
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #a5cdff7d;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #20408D;
+        border-radius: 10px;
+    }
 }
 
 body.lock {
@@ -776,7 +790,6 @@ a {
                 padding: 20px 40px 20px 20px;
                 margin-bottom: 35px;
                 background: linear-gradient(270deg, #EAF4FF 46.49%, rgba(234, 244, 255, 0.00) 100%);
-
                 @media(max-width: $laptop) {
                     min-height: 250px;
                 }
@@ -785,6 +798,9 @@ a {
                     margin: 0;
                     min-height: unset;
                     background: none;
+                }
+                @media(max-width: 650px){
+                    padding: 0;
                 }
 
                 & li {
@@ -863,6 +879,9 @@ a {
             @media(max-width: $tablet) {
                 background: linear-gradient(270deg, #EAF4FF 46.49%, rgba(234, 244, 255, 0.00) 100%);
             }
+            @media(max-width: 650px){
+                background: none;
+            }
         }
 
         &__content {
@@ -872,6 +891,9 @@ a {
 
             @media(max-width: 650px) {
                 flex-direction: column;
+                padding: 5px 45px;
+                flex-grow: 1; 
+                overflow-y: scroll;
             }
         }
 
@@ -892,7 +914,13 @@ a {
             @media(max-width: $tablet) {
                 display: none;
             }
-
+            @media(max-width: 650px){
+                display: block;
+                width: fit-content;
+                margin: 15px auto;
+                font-size: 14px;
+                padding: 6px 0;
+            }
             &-mob {
                 display: none;
 
@@ -907,6 +935,9 @@ a {
                     background: #F0F7FF;
                     padding: 15px;
                 }
+                @media(max-width: 650px){
+                    display: none;
+                }
             }
         }
 
@@ -918,7 +949,10 @@ a {
             @media(max-width:$tablet) {
                 margin-bottom: 15px;
             }
-
+            @media(max-width: 650px){
+                padding: 0;
+                margin: 0;
+            }
             img {
                 width: 450px;
 
@@ -932,6 +966,11 @@ a {
 
                 @media(max-width: $tablet) {
                     width: 200px;
+                }
+                @media(max-width: 650px){
+                    display: block;
+                    margin: 0 auto;
+                    width: 150px;
                 }
             }
         }
@@ -1570,15 +1609,77 @@ a {
 
 .address {
     padding: 65px 0 180px;
+    @media(max-width:$L-laptop){
+        padding: 100px 0 120px;
+    }
+    @media(max-width: $L-mobile){
+        padding: 65px 0;
+    }
     &-wrapper{
         position: relative;
     }
     &-info {
         margin: 30px 0 50px;
     }
+    &-tel{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        a{
+            color: #000;
+            font-family: $roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%; 
+            @media(max-width: $L-laptop){
+                font-size: 14px;
+            }
+        }
+    }
+    &-search{
+        margin-bottom: 20px;
+        display: none;
+        align-items: center;
+        border-radius: 59px;
+        background: #FFF;
+        column-gap: 30px;
+        box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+        padding: 15px 30px;
+        @media(max-width: $L-mobile){
+            display: flex;
+        }
+        @media(max-width: $mobile){
+            padding: 10px 20px;
+            column-gap: 20px;
+        }
+        & svg{
+            @media(max-width: $mobile){
+                width: 20px;
+                height: 20px;
+            }
+        }
+        & input{
+            background: transparent;
+            color: #090909;
+            font-family: $roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 140%;
+            outline: none;
+            border: none;
+            &::placeholder{
+                color: #929292;
+            }
+            @media(max-width: $mobile){
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 #city-menu {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -1588,6 +1689,9 @@ a {
     border-radius: 0px 30px 30px 30px;
     background: #FFF;
     box-shadow: 0px 4px 47px 0px rgba(0, 0, 0, 0.25);
+    @media(max-width: $L-mobile){
+        display: none;
+    }
 
     & h3 {
         color: #000;
@@ -1597,12 +1701,23 @@ a {
         line-height: 120%;
         margin-bottom: 20px;
         padding: 0 30px;
+        @media(max-width:$L-laptop){
+            font-size: 20px;
+        }
+        @media(max-width: $tablet){
+            font-size: 18px;
+        }
+        @media(max-width: $L-mobile){
+            display: none;
+        }
     }
 
     & ul {
         max-height: 300px;
         overflow-y: scroll;
-
+        @media(max-width: $tablet){
+            max-height: 200px;
+        }
         /* width */
         &::-webkit-scrollbar {
             width: 7px;
@@ -1627,6 +1742,13 @@ a {
             font-weight: 500;
             line-height: 120%;
             padding: 10px 30px;
+            cursor: pointer;
+            @media(max-width: $L-laptop){
+                font-size: 18px;
+            }
+            @media(max-width: $tablet){
+                font-size: 16px;
+            }
         }
     }
 }
@@ -1653,7 +1775,29 @@ a {
     }
 
     @media(max-width: $mobile) {
-        height: 205px;
+        height: 270px;
+    }
+    & h3{
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 120%; 
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 20px;
+        @media(max-width: $L-laptop){
+            font-size: 16px;
+        }
+    }
+    & p{
+        color: #000;
+        font-family: $roboto;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 140%;
+        margin-bottom: 20px;
+        @media(max-width: $L-laptop){
+            font-size: 14px;
+        }
     }
 }
 
