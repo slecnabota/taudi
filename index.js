@@ -94,39 +94,29 @@ const certificate = new Swiper('#certificateSwiper', {
     }
   }
 });
-const certificateMSwiper = new Swiper('#certificateMSwiper', {
-  direction: 'horizontal',
-  loop: false,
-  slidesPerView: 1,
-});
 
 const certificateButtons = document.querySelectorAll('.certificate-btn');
-certificateButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    // Открываем модальное окно
-    openCertificateModal(index);
-  });
-});
-function openCertificateModal(slideIndex) {
-  // Открываем модальное окно
-  const modal = document.getElementById('certificateModal');
-  modal.style.display = 'flex';
+    const modal = document.getElementById('certificateModal');
+    const modalImages = document.getElementById('certificateImages');
 
-  // Создаем Swiper внутри модального окна и устанавливаем начальный слайд
-  const certificateMSwiper = new Swiper('#certificateMSwiper', {
-    initialSlide: slideIndex,
-    // Другие параметры Swiper...
-  });
+    certificateButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            openModal(index);
+        });
+    });
 
-  // Добавляем обработчик события для закрытия модального окна
-  const closeBtn = document.getElementById('certificateClose');
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    // Уничтожаем Swiper при закрытии модального окна
-    certificateMSwiper.destroy();
-  });
-}
+    const modalClose = document.getElementById('certificateClose');
 
+    modalClose.addEventListener('click', closeModal);
+
+    function openModal(index) {
+        modal.style.display = 'block';
+        modalImages.style.transform = `translateX(-${index * 25}%)`; // 25% для 4 изображений
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
 $(document).ready(function () {
   $('#city-menu li').click(function () {
     $('#city-menu li').removeClass('selected');

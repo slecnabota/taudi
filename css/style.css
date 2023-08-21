@@ -1282,30 +1282,36 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.certificate-modal__flex {
+.certificate-modal.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .certificate-modal__inner {
-  width: 60%;
+  max-width: 100%;
+  height: 80%;
   margin: 0 auto;
-  background: white;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media (max-width: 1280px) {
-  .certificate-modal__inner {
-    width: 80%;
-  }
-}
-@media (max-width: 768px) {
-  .certificate-modal__inner {
-    width: 90%;
-  }
+.certificate-modal .swiper {
+  max-width: 100%;
+  height: 100%;
 }
 .certificate-modal__slide img {
-  width: 100%;
   height: 100%;
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .certificate-modal__close {
   position: absolute;
