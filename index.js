@@ -95,28 +95,7 @@ const certificate = new Swiper('#certificateSwiper', {
   }
 });
 
-const certificateButtons = document.querySelectorAll('.certificate-btn');
-    const modal = document.getElementById('certificateModal');
-    const modalImages = document.getElementById('certificateImages');
 
-    certificateButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            openModal(index);
-        });
-    });
-
-    const modalClose = document.getElementById('certificateClose');
-
-    modalClose.addEventListener('click', closeModal);
-
-    function openModal(index) {
-        modal.style.display = 'block';
-        modalImages.style.transform = `translateX(-${index * 25}%)`; // 25% для 4 изображений
-    }
-
-    function closeModal() {
-        modal.style.display = 'none';
-    }
 $(document).ready(function () {
   $('#city-menu li').click(function () {
     $('#city-menu li').removeClass('selected');
@@ -301,3 +280,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+
+//
+
+const certificateButtons = document.querySelectorAll(".certificate-btn");
+            const modalImages = document.querySelectorAll(".certificate-modal__item");
+
+            // Add a click event listener to each certificate button
+            certificateButtons.forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    // Show the corresponding modal image
+                    modalImages.forEach((image, imageIndex) => {
+                        if (imageIndex === index) {
+                            image.style.display = "block";
+                        } else {
+                            image.style.display = "none";
+                        }
+                    });
+
+                    // Show the certificate modal
+                    const modal = document.getElementById("certificateModal");
+                    modal.style.display = "flex";
+                });
+            });
+
+            // Add a click event listener to close the modal
+            const closeModalButton2 = document.getElementById("certificateClose");
+            closeModalButton2.addEventListener("click", () => {
+                const modal = document.getElementById("certificateModal");
+                modal.style.display = "none";
+            });

@@ -1288,8 +1288,7 @@ a {
   display: flex;
 }
 .certificate-modal__inner {
-  max-width: 100%;
-  height: 80%;
+  max-height: 70%;
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -1302,16 +1301,33 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.certificate-modal .swiper {
-  max-width: 100%;
+.certificate-modal__images, .certificate-modal__item {
   height: 100%;
 }
-.certificate-modal__slide img {
+.certificate-modal__images {
+  max-height: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .certificate-modal__images {
+    width: 80%;
+    max-height: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.certificate-modal__item img {
+  width: 100%;
   height: 100%;
   display: block;
   margin: 0 auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .certificate-modal__item img {
+    height: auto;
+  }
 }
 .certificate-modal__close {
   position: absolute;
